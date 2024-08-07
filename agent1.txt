@@ -1,0 +1,169 @@
+I0807 19:07:03.374789       1 log_file.go:93] Set log file max size to 104857600
+I0807 19:07:03.375583       1 agent.go:109] "Test Log" GitHub username="AryanBakliwal" Pod name="antrea-agent-6kjvr"
+I0807 19:07:03.375600       1 agent.go:110] "Starting Antrea Agent" version="v2.2.0-dev-40eb0555.dirty"
+I0807 19:07:03.375621       1 client.go:89] No kubeconfig file was specified. Falling back to in-cluster config
+I0807 19:07:03.376406       1 client.go:86] "No Antrea kubeconfig file was specified. Falling back to in-cluster config"
+I0807 19:07:03.376514       1 prometheus.go:189] Initializing prometheus metrics
+I0807 19:07:03.376760       1 ovs_client.go:70] Connecting to OVSDB at address /var/run/openvswitch/db.sock
+I0807 19:07:04.377130       1 ovs_client.go:89] Not connected yet, will try again in 2s
+I0807 19:07:04.377515       1 agent.go:389] Setting up node network
+I0807 19:07:04.377663       1 discoverer.go:82] Starting ServiceCIDRDiscoverer
+I0807 19:07:04.386862       1 agent.go:1008] "Got Interface MTU" MTU=1450
+I0807 19:07:04.387951       1 ovs_client.go:137] Created bridge: 7a9d1ee4-fdb6-43b6-b0ad-83e34b67f5d7
+I0807 19:07:04.410446       1 agent.go:865] "Allocated OpenFlow port for tunnel interface" port="antrea-tun0" ofPort=32768
+I0807 19:07:04.421720       1 agent.go:682] "Allocated OpenFlow port for gateway interface" port="antrea-gw0" ofPort=32769
+I0807 19:07:04.451563       1 route_linux.go:211] Initializing iptables
+I0807 19:07:04.451955       1 agent.go:1155] No round number found in OVSDB, using 1
+I0807 19:07:04.451967       1 agent.go:1167] Using round number 1
+I0807 19:07:04.452260       1 ofctrl.go:218] Initialize connection or re-connect to /var/run/openvswitch/br-int.mgmt.
+I0807 19:07:04.493842       1 route_linux.go:223] Initialized iptables
+I0807 19:07:05.452660       1 ofctrl.go:233] Connected to socket /var/run/openvswitch/br-int.mgmt
+I0807 19:07:05.452932       1 ofctrl.go:295] New connection..
+I0807 19:07:05.452969       1 ofctrl.go:303] Sent hello with OF version: 6
+I0807 19:07:05.453035       1 ofctrl.go:315] Received Openflow 1.5 Hello message
+I0807 19:07:05.453441       1 ofctrl.go:335] Received ofp1.5 Switch feature response: {Header:{Version:6 Type:6 Length:32 Xid:3} DPID:00:00:e6:1e:9d:7a:b6:43 Buffers:0 NumTables:254 AuxilaryId:0 pad:[0 0] Capabilities:591 Reserved:0}
+I0807 19:07:05.453468       1 ofSwitch.go:85] Openflow Connection for new switch: 00:00:e6:1e:9d:7a:b6:43
+I0807 19:07:05.453585       1 ofctrl_bridge.go:332] OFSwitch is connected: 00:00:e6:1e:9d:7a:b6:43
+I0807 19:07:05.522539       1 agent.go:482] Agent initialized NodeConfig=NodeName: antrea-worker, OVSBridge: br-int, PodIPv4CIDR: 10.244.1.0/24, PodIPv6CIDR: <nil>, NodeIPv4: 172.18.0.2/16, NodeIPv6: <nil>, TransportIPv4: 172.18.0.2/16, TransportIPv6: <nil>, Gateway: Name antrea-gw0: IPv4 10.244.1.1, IPv6 <nil>, MAC 1e:2f:2c:a6:44:0f, NetworkConfig=&{encap geneve 0 false None {psk }  [] true false 50 60 1450 false None}
+I0807 19:07:05.522704       1 metrics.go:138] Registering Antrea Proxy prometheus metrics
+I0807 19:07:05.529383       1 fqdn.go:188] "Using kube-dns Service for DNS requests" dnsServer="10.96.0.10:53"
+I0807 19:07:05.529671       1 audit_logging.go:196] "Initialized Antrea-native Policy Logger for audit logging" logFile="/var/log/antrea/networkpolicy/np.log" options={"MaxSize":500,"MaxBackups":3,"MaxAge":28,"Compress":true}
+I0807 19:07:05.531273       1 server.go:754] "Starting reconciliation for CNI server"
+I0807 19:07:05.540599       1 client.go:151] "Didn't get CA certificate, skip updating Antrea Client"
+I0807 19:07:05.540667       1 route_linux.go:263] "Starting iptables, ipset and route sync" interval="1m0s"
+I0807 19:07:05.540692       1 agent.go:885] "Waiting for flow restoration to complete"
+I0807 19:07:05.540677       1 node_route_controller.go:352] Starting AntreaAgentNodeRouteController
+I0807 19:07:05.540734       1 endpoint_resolver.go:194] "Starting controller" name="ServiceEndpointResolver:kube-system/antrea"
+I0807 19:07:05.540748       1 shared_informer.go:311] Waiting for caches to sync for ServiceEndpointResolver:kube-system/antrea
+I0807 19:07:05.540756       1 channel.go:83] "Starting SubscribableChannel" name="PodUpdate"
+I0807 19:07:05.540777       1 server.go:676] "Starting CNI server"
+I0807 19:07:05.540897       1 server.go:686] "CNI server is listening ..."
+I0807 19:07:05.541008       1 config.go:423] "Starting node config controller"
+I0807 19:07:05.541022       1 shared_informer.go:311] Waiting for caches to sync for node config
+I0807 19:07:05.541172       1 networkpolicy_controller.go:608] Waiting for Antrea client to be ready
+I0807 19:07:05.541201       1 egress_controller.go:491] Starting AntreaAgentEgressController
+I0807 19:07:05.541341       1 shared_informer.go:311] Waiting for caches to sync for AntreaAgentEgressController
+I0807 19:07:05.541376       1 configmap_cafile_content.go:202] "Starting controller" name="antrea-ca::kube-system::antrea-ca::ca.crt"
+I0807 19:07:05.541394       1 shared_informer.go:311] Waiting for caches to sync for antrea-ca::kube-system::antrea-ca::ca.crt
+I0807 19:07:05.541766       1 log_file.go:121] Starting log file monitoring. Maximum log file number is 4
+I0807 19:07:05.540736       1 shared_informer.go:311] Waiting for caches to sync for AntreaAgentNodeRouteController
+I0807 19:07:05.542017       1 cluster.go:335] "Starting" controllerName="MemberListCluster"
+I0807 19:07:05.542371       1 shared_informer.go:311] Waiting for caches to sync for MemberListCluster
+I0807 19:07:05.542041       1 local_ip_detector_linux.go:59] Starting localIPDetector
+I0807 19:07:05.542063       1 ip_scheduler.go:219] "Starting Egress IP scheduler"
+I0807 19:07:05.542226       1 traceflow_controller.go:173] Starting AntreaAgentTraceflowController
+I0807 19:07:05.546794       1 shared_informer.go:311] Waiting for caches to sync for AntreaAgentTraceflowController
+I0807 19:07:05.542243       1 config.go:223] Starting service config controller
+I0807 19:07:05.546858       1 shared_informer.go:311] Waiting for caches to sync for service config
+I0807 19:07:05.542357       1 config.go:314] Starting endpoint slice config controller
+I0807 19:07:05.546882       1 shared_informer.go:311] Waiting for caches to sync for endpoint slice config
+I0807 19:07:05.542900       1 controller.go:168] Starting ExternalIPPoolController
+I0807 19:07:05.546894       1 shared_informer.go:311] Waiting for caches to sync for ExternalIPPoolController
+I0807 19:07:05.578240       1 discoverer.go:207] "Service IPv4 CIDR was updated" ServiceCIDR="10.96.0.0/16"
+I0807 19:07:05.641263       1 shared_informer.go:318] Caches are synced for node config
+I0807 19:07:05.641263       1 shared_informer.go:318] Caches are synced for ServiceEndpointResolver:kube-system/antrea
+E0807 19:07:05.641358       1 endpoint_resolver.go:240] "Cannot resolve endpoint because Service is unavailable" err="no endpoints available for service \"antrea\"" service="kube-system/antrea"
+I0807 19:07:05.642313       1 shared_informer.go:318] Caches are synced for AntreaAgentNodeRouteController
+I0807 19:07:05.642326       1 node_route_controller.go:304] Reconciliation for AntreaAgentNodeRouteController
+I0807 19:07:05.642317       1 shared_informer.go:318] Caches are synced for antrea-ca::kube-system::antrea-ca::ca.crt
+E0807 19:07:05.642456       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+I0807 19:07:05.645128       1 node_route_controller.go:541] "Adding routes and flows to Node" Node="antrea-control-plane" podCIDRs=["10.244.0.0/24"] addresses=[{"type":"InternalIP","address":"172.18.0.3"},{"type":"Hostname","address":"antrea-control-plane"}]
+I0807 19:07:05.645164       1 node_route_controller.go:584] "Adding route and flow to Node" Node="antrea-control-plane" podCIDR="10.244.0.0/24" peerNodeIP="172.18.0.3"
+I0807 19:07:05.646775       1 shared_informer.go:318] Caches are synced for MemberListCluster
+I0807 19:07:05.646872       1 shared_informer.go:318] Caches are synced for AntreaAgentTraceflowController
+I0807 19:07:05.646903       1 cluster.go:531] "Processed Node event" eventType="Join" nodeName="antrea-worker" affectedExternalIPPoolNum=1
+I0807 19:07:05.646918       1 shared_informer.go:318] Caches are synced for service config
+I0807 19:07:05.646926       1 cluster.go:531] "Processed Node event" eventType="Join" nodeName="antrea-control-plane" affectedExternalIPPoolNum=1
+I0807 19:07:05.646909       1 shared_informer.go:318] Caches are synced for endpoint slice config
+I0807 19:07:05.646999       1 shared_informer.go:318] Caches are synced for ExternalIPPoolController
+E0807 19:07:05.648205       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:05.658296       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:05.678893       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:05.719405       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+I0807 19:07:05.741857       1 shared_informer.go:318] Caches are synced for AntreaAgentEgressController
+I0807 19:07:05.742037       1 route_linux.go:1295] "Restoring IP routes and rules for Egress"
+I0807 19:07:05.742239       1 egress_controller.go:1212] Starting watch for EgressGroup
+W0807 19:07:05.742254       1 egress_controller.go:1215] Failed to get antrea client: Antrea client is not ready
+E0807 19:07:05.800106       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:05.960452       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:06.280640       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:06.921645       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+I0807 19:07:07.541760       1 networkpolicy_controller.go:608] Waiting for Antrea client to be ready
+E0807 19:07:08.202402       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+E0807 19:07:09.161468       1 endpoint_resolver.go:240] "Cannot resolve endpoint because Service is unavailable" err="no endpoints available for service \"antrea\"" service="kube-system/antrea"
+I0807 19:07:09.437478       1 server.go:430] "Received CmdAdd request" request="cni_args:{container_id:\"7b514fee5ca22fd20c640c8af6165804e6dbed4e614cfa1802a746d748d9ec81\"  netns:\"/var/run/netns/cni-f6578bbb-b49c-5c28-8c8f-f9677bb8aa8e\"  ifname:\"eth0\"  args:\"K8S_POD_NAMESPACE=kube-system;K8S_POD_NAME=coredns-7db6d8ff4d-9td89;K8S_POD_INFRA_CONTAINER_ID=7b514fee5ca22fd20c640c8af6165804e6dbed4e614cfa1802a746d748d9ec81;K8S_POD_UID=416ca089-1de0-43ed-9540-4c0ce49ad490;IgnoreUnknown=1\"  path:\"/opt/cni/bin\"  network_configuration:\"{\\\"cniVersion\\\":\\\"0.3.0\\\",\\\"ipam\\\":{\\\"type\\\":\\\"host-local\\\"},\\\"name\\\":\\\"antrea\\\",\\\"type\\\":\\\"antrea\\\"}\"}"
+I0807 19:07:09.477106       1 server.go:430] "Received CmdAdd request" request="cni_args:{container_id:\"6b61142ba5d3665d5ed2aff3e81ce87e022ca5c3f5dbf21df9c57fcf34dc8fff\"  netns:\"/var/run/netns/cni-4e25d9da-e080-c668-14bd-53b18cc2d060\"  ifname:\"eth0\"  args:\"K8S_POD_UID=a43d0c4f-3305-45e3-afb6-a8ab84d3c98b;IgnoreUnknown=1;K8S_POD_NAMESPACE=kube-system;K8S_POD_NAME=coredns-7db6d8ff4d-92klf;K8S_POD_INFRA_CONTAINER_ID=6b61142ba5d3665d5ed2aff3e81ce87e022ca5c3f5dbf21df9c57fcf34dc8fff\"  path:\"/opt/cni/bin\"  network_configuration:\"{\\\"cniVersion\\\":\\\"0.3.0\\\",\\\"ipam\\\":{\\\"type\\\":\\\"host-local\\\"},\\\"name\\\":\\\"antrea\\\",\\\"type\\\":\\\"antrea\\\"}\"}"
+I0807 19:07:09.495689       1 server.go:430] "Received CmdAdd request" request="cni_args:{container_id:\"23466dc375c55c49529147350819456a5d59f63cf5fa46d50f3ad3fdb1bf3dde\"  netns:\"/var/run/netns/cni-ad6da1df-01db-2203-aff4-8e21ecafbb44\"  ifname:\"eth0\"  args:\"K8S_POD_NAME=local-path-provisioner-988d74bc-gzgrh;K8S_POD_INFRA_CONTAINER_ID=23466dc375c55c49529147350819456a5d59f63cf5fa46d50f3ad3fdb1bf3dde;K8S_POD_UID=2910a87f-2f4c-448a-98a7-8e58e5f6ca89;IgnoreUnknown=1;K8S_POD_NAMESPACE=local-path-storage\"  path:\"/opt/cni/bin\"  network_configuration:\"{\\\"cniVersion\\\":\\\"0.3.0\\\",\\\"ipam\\\":{\\\"type\\\":\\\"host-local\\\"},\\\"name\\\":\\\"antrea\\\",\\\"type\\\":\\\"antrea\\\"}\"}"
+I0807 19:07:09.542002       1 networkpolicy_controller.go:608] Waiting for Antrea client to be ready
+I0807 19:07:10.541787       1 networkpolicy_controller.go:616] Stopped waiting for Antrea client
+I0807 19:07:10.541854       1 networkpolicy_controller.go:634] Waiting for all watchers to complete full sync
+I0807 19:07:10.541908       1 networkpolicy_controller.go:968] Starting watch for AppliedToGroup
+W0807 19:07:10.541927       1 networkpolicy_controller.go:971] Failed to start watch for AppliedToGroup: Antrea client is not ready
+I0807 19:07:10.541941       1 networkpolicy_controller.go:946] "Getting init events from fallback" objectType="AppliedToGroup"
+I0807 19:07:10.542095       1 networkpolicy_controller.go:968] Starting watch for AddressGroup
+W0807 19:07:10.542105       1 networkpolicy_controller.go:971] Failed to start watch for AddressGroup: Antrea client is not ready
+I0807 19:07:10.542117       1 networkpolicy_controller.go:946] "Getting init events from fallback" objectType="AddressGroup"
+I0807 19:07:10.542199       1 networkpolicy_controller.go:968] Starting watch for NetworkPolicy
+W0807 19:07:10.542209       1 networkpolicy_controller.go:971] Failed to start watch for NetworkPolicy: Antrea client is not ready
+I0807 19:07:10.542218       1 networkpolicy_controller.go:946] "Getting init events from fallback" objectType="NetworkPolicy"
+I0807 19:07:10.542326       1 networkpolicy_controller.go:636] All watchers have completed full sync, installing flows for init events
+I0807 19:07:10.543963       1 networkpolicy_controller.go:641] Starting NetworkPolicy workers now
+I0807 19:07:10.544210       1 networkpolicy_controller.go:647] Starting IDAllocator worker to maintain the async rule cache
+I0807 19:07:10.544801       1 status_controller.go:210] Starting NetworkPolicy StatusController
+I0807 19:07:10.546003       1 agent.go:642] Cleaning up flow-restore-wait config
+I0807 19:07:10.549691       1 agent.go:655] Cleaned up flow-restore-wait config
+I0807 19:07:10.554559       1 agent.go:890] "Flow restoration has completed"
+I0807 19:07:10.564098       1 collector.go:86] Start collecting metrics
+I0807 19:07:10.574065       1 server.go:500] "Allocated IP addresses" container="23466dc375c55c49529147350819456a5d59f63cf5fa46d50f3ad3fdb1bf3dde" result={"cniVersion":"1.1.0","ips":[{"address":"10.244.1.2/24","gateway":"10.244.1.1"}]}
+I0807 19:07:10.589166       1 server.go:500] "Allocated IP addresses" container="6b61142ba5d3665d5ed2aff3e81ce87e022ca5c3f5dbf21df9c57fcf34dc8fff" result={"cniVersion":"1.1.0","ips":[{"address":"10.244.1.4/24","gateway":"10.244.1.1"}]}
+I0807 19:07:10.594328       1 server.go:500] "Allocated IP addresses" container="7b514fee5ca22fd20c640c8af6165804e6dbed4e614cfa1802a746d748d9ec81" result={"cniVersion":"1.1.0","ips":[{"address":"10.244.1.3/24","gateway":"10.244.1.1"}]}
+I0807 19:07:10.731995       1 pod_configuration.go:258] "Configured container interface" Pod="kube-system/coredns-7db6d8ff4d-92klf" container="6b61142ba5d3665d5ed2aff3e81ce87e022ca5c3f5dbf21df9c57fcf34dc8fff" interface="eth0" hostInterface="coredns--1c2b92"
+I0807 19:07:10.733588       1 server.go:529] "CmdAdd for container succeeded" container="6b61142ba5d3665d5ed2aff3e81ce87e022ca5c3f5dbf21df9c57fcf34dc8fff"
+I0807 19:07:10.739834       1 pod_configuration.go:258] "Configured container interface" Pod="kube-system/coredns-7db6d8ff4d-9td89" container="7b514fee5ca22fd20c640c8af6165804e6dbed4e614cfa1802a746d748d9ec81" interface="eth0" hostInterface="coredns--f9ee91"
+I0807 19:07:10.740639       1 server.go:529] "CmdAdd for container succeeded" container="7b514fee5ca22fd20c640c8af6165804e6dbed4e614cfa1802a746d748d9ec81"
+I0807 19:07:10.742892       1 pod_configuration.go:258] "Configured container interface" Pod="local-path-storage/local-path-provisioner-988d74bc-gzgrh" container="23466dc375c55c49529147350819456a5d59f63cf5fa46d50f3ad3fdb1bf3dde" interface="eth0" hostInterface="local-pa-3960c1"
+I0807 19:07:10.742942       1 server.go:529] "CmdAdd for container succeeded" container="23466dc375c55c49529147350819456a5d59f63cf5fa46d50f3ad3fdb1bf3dde"
+I0807 19:07:10.744932       1 egress_controller.go:1212] Starting watch for EgressGroup
+W0807 19:07:10.744958       1 egress_controller.go:1215] Failed to get antrea client: Antrea client is not ready
+E0807 19:07:10.762720       1 configmap_cafile_content.go:243] key failed with : configmap "antrea-ca" not found
+I0807 19:07:11.247756       1 client.go:156] "Didn't get Endpoint URL for Antrea Service, skip updating Antrea Client"
+I0807 19:07:11.462040       1 serving.go:380] Generated self-signed cert in-memory
+I0807 19:07:11.857111       1 handler.go:275] Adding GroupVersion system.antrea.io v1beta1 to ResourceManager
+I0807 19:07:11.858865       1 agent.go:53] Starting Antrea Agent Monitor
+I0807 19:07:11.858868       1 pipeline.go:461] Start collecting OVS meter stats
+I0807 19:07:11.868927       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+I0807 19:07:11.868947       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+I0807 19:07:11.868981       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0807 19:07:11.868998       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0807 19:07:11.869019       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0807 19:07:11.869027       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0807 19:07:11.870673       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0807 19:07:11.870631       1 secure_serving.go:213] Serving securely on [::]:10350
+I0807 19:07:11.970070       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+I0807 19:07:11.970045       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0807 19:07:11.970106       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0807 19:07:15.522806       1 agent.go:552] Deleting stale flows from previous round if any
+I0807 19:07:15.522823       1 agent.go:489] Persisting round number 1 to OVSDB
+I0807 19:07:15.523314       1 agent.go:494] Round number 1 was persisted to OVSDB
+I0807 19:07:15.542572       1 networkpolicy_controller.go:968] Starting watch for NetworkPolicy
+I0807 19:07:15.542587       1 networkpolicy_controller.go:968] Starting watch for AddressGroup
+I0807 19:07:15.542580       1 networkpolicy_controller.go:968] Starting watch for AppliedToGroup
+W0807 19:07:15.542601       1 networkpolicy_controller.go:971] Failed to start watch for AddressGroup: Antrea client is not ready
+W0807 19:07:15.542599       1 networkpolicy_controller.go:971] Failed to start watch for NetworkPolicy: Antrea client is not ready
+W0807 19:07:15.542603       1 networkpolicy_controller.go:971] Failed to start watch for AppliedToGroup: Antrea client is not ready
+I0807 19:07:15.745694       1 egress_controller.go:1212] Starting watch for EgressGroup
+W0807 19:07:15.745713       1 egress_controller.go:1215] Failed to get antrea client: Antrea client is not ready
+I0807 19:07:19.446493       1 endpoint_resolver.go:276] "Selected a new Endpoint for Service, notifying listeners" service="kube-system/antrea" url="https://172.18.0.2:10349"
+I0807 19:07:19.446698       1 client.go:178] Updating Antrea client with the new CA bundle
+I0807 19:07:20.543574       1 networkpolicy_controller.go:968] Starting watch for NetworkPolicy
+I0807 19:07:20.543584       1 networkpolicy_controller.go:968] Starting watch for AddressGroup
+I0807 19:07:20.543600       1 networkpolicy_controller.go:968] Starting watch for AppliedToGroup
+I0807 19:07:20.554201       1 networkpolicy_controller.go:983] Started watch for NetworkPolicy
+I0807 19:07:20.554201       1 networkpolicy_controller.go:983] Started watch for AppliedToGroup
+I0807 19:07:20.554261       1 networkpolicy_controller.go:1013] Received 0 init events for NetworkPolicy
+I0807 19:07:20.554316       1 networkpolicy_controller.go:983] Started watch for AddressGroup
+I0807 19:07:20.554265       1 networkpolicy_controller.go:1013] Received 0 init events for AppliedToGroup
+I0807 19:07:20.554352       1 networkpolicy_controller.go:1013] Received 0 init events for AddressGroup
+I0807 19:07:20.746184       1 egress_controller.go:1212] Starting watch for EgressGroup
+I0807 19:07:20.749138       1 egress_controller.go:1233] Started watch for EgressGroup
+I0807 19:07:20.749194       1 egress_controller.go:1261] Received 0 init events for EgressGroup

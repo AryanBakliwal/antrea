@@ -1,0 +1,20 @@
+apiVersion: crd.antrea.io/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: egress-annp
+  namespace: lfx-mentorship
+spec:
+  priority: 5
+  appliedTo:
+    - podSelector: {} 
+  egress:
+    - action: Allow
+      to:
+        - namespaceSelector: {}
+      name: AllowToAllPodsInAllNamespaces
+    - action: Allow
+      to:
+        - fqdn: "api.github.com"
+      name: AllowToFQDN
+    - action: Reject
+      name: RejectAll

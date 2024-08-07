@@ -1,0 +1,73 @@
+I0807 19:07:09.782264       1 log_file.go:93] Set log file max size to 104857600
+I0807 19:07:09.782727       1 controller.go:125] "Test Log" GitHub username="AryanBakliwal" Pod name="antrea-controller-6589f6db9-t2hzs"
+I0807 19:07:09.782745       1 controller.go:126] "Starting Antrea Controller" version="v2.2.0-dev-40eb0555.dirty"
+I0807 19:07:09.782759       1 client.go:89] No kubeconfig file was specified. Falling back to in-cluster config
+I0807 19:07:09.789802       1 selfsignedcert_provider.go:298] "Didn't find the Secret for TLS certificate and key" secret="antrea-controller-tls"
+I0807 19:07:09.790486       1 selfsignedcert_provider.go:260] "Generating self-signed cert"
+I0807 19:07:10.148729       1 selfsignedcert_provider.go:336] "Creating Secret to persist self-signed cert" secret=""
+I0807 19:07:10.204341       1 selfsignedcert_provider.go:276] "Writing certificate and key to the cert directory"
+I0807 19:07:11.166988       1 handler.go:275] Adding GroupVersion controlplane.antrea.io v1beta2 to ResourceManager
+I0807 19:07:11.168329       1 handler.go:275] Adding GroupVersion system.antrea.io v1beta1 to ResourceManager
+I0807 19:07:11.170582       1 handler.go:275] Adding GroupVersion stats.antrea.io v1alpha1 to ResourceManager
+I0807 19:07:11.174147       1 log_file.go:121] Starting log file monitoring. Maximum log file number is 4
+I0807 19:07:11.174478       1 prometheus.go:124] Initializing prometheus metrics
+I0807 19:07:11.174664       1 controller.go:153] "Starting" controller="EgressController"
+I0807 19:07:11.174674       1 shared_informer.go:311] Waiting for caches to sync for EgressController
+I0807 19:07:11.174704       1 controller.go:119] "Starting" controllerName="AntreaControllerMonitor"
+I0807 19:07:11.174710       1 shared_informer.go:311] Waiting for caches to sync for AntreaControllerMonitor
+I0807 19:07:11.174725       1 group_entity_index.go:668] Starting GroupEntityIndex
+I0807 19:07:11.174763       1 controller.go:167] Starting GroupEntityController
+I0807 19:07:11.174769       1 shared_informer.go:311] Waiting for caches to sync for GroupEntityController
+I0807 19:07:11.174785       1 networkpolicy_controller.go:947] Starting NetworkPolicyController
+I0807 19:07:11.174792       1 shared_informer.go:311] Waiting for caches to sync for NetworkPolicyController
+I0807 19:07:11.175023       1 aggregator.go:352] Starting stats aggregator
+I0807 19:07:11.175032       1 shared_informer.go:311] Waiting for caches to sync for stats aggregator
+I0807 19:07:11.175044       1 controller.go:117] Starting TraceflowController
+I0807 19:07:11.175048       1 shared_informer.go:311] Waiting for caches to sync for TraceflowController
+I0807 19:07:11.175075       1 status_controller.go:192] Starting NetworkPolicyStatusController
+I0807 19:07:11.175083       1 shared_informer.go:311] Waiting for caches to sync for NetworkPolicyStatusController
+I0807 19:07:11.175104       1 controller.go:168] Starting ExternalIPPoolController
+I0807 19:07:11.175109       1 shared_informer.go:311] Waiting for caches to sync for ExternalIPPoolController
+I0807 19:07:11.227402       1 clusteridentity.go:115] New cluster UUID: 598288d3-b2d4-4aab-ac63-c3440fee4b19
+I0807 19:07:11.227545       1 cacert_controller.go:282] "Syncing CA certificate with ConfigMap" name="kube-system/antrea-ca"
+I0807 19:07:11.274850       1 shared_informer.go:318] Caches are synced for AntreaControllerMonitor
+I0807 19:07:11.275237       1 shared_informer.go:318] Caches are synced for ExternalIPPoolController
+I0807 19:07:11.275267       1 shared_informer.go:318] Caches are synced for stats aggregator
+I0807 19:07:11.275278       1 shared_informer.go:318] Caches are synced for TraceflowController
+I0807 19:07:11.275303       1 shared_informer.go:318] Caches are synced for NetworkPolicyStatusController
+I0807 19:07:11.274825       1 shared_informer.go:318] Caches are synced for GroupEntityController
+I0807 19:07:11.281757       1 shared_informer.go:318] Caches are synced for NetworkPolicyController
+I0807 19:07:11.292166       1 controller.go:145] "Shutting down" controllerName="AntreaControllerMonitor"
+I0807 19:07:11.292218       1 controller.go:345] "Creating agent monitoring CRD" name="antrea-control-plane"
+I0807 19:07:11.292613       1 controller.go:345] "Creating agent monitoring CRD" name="antrea-worker"
+I0807 19:07:11.297029       1 cacert_controller.go:249] "Syncing CA certificate with APIService" name="v1alpha1.stats.antrea.io"
+I0807 19:07:11.332068       1 cacert_controller.go:249] "Syncing CA certificate with APIService" name="v1beta1.system.antrea.io"
+I0807 19:07:11.348169       1 cacert_controller.go:249] "Syncing CA certificate with APIService" name="v1beta2.controlplane.antrea.io"
+I0807 19:07:11.372403       1 cacert_controller.go:189] "Syncing CA certificate with MutatingWebhookConfiguration" name="crdmutator.antrea.io"
+I0807 19:07:11.376442       1 shared_informer.go:318] Caches are synced for EgressController
+I0807 19:07:11.396834       1 cacert_controller.go:222] "Syncing CA certificate with ValidatingWebhookConfiguration" name="crdvalidator.antrea.io"
+I0807 19:07:11.489428       1 cacert_controller.go:169] "Syncing CA certificate with CRD that have conversion webhooks" name="ippools.crd.antrea.io"
+I0807 19:07:11.541397       1 cacert_controller.go:319] Starting CACertController
+I0807 19:07:11.541503       1 selfsignedcert_provider.go:148] Starting selfSignedCertProvider
+I0807 19:07:11.671072       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+I0807 19:07:11.671194       1 shared_informer.go:311] Waiting for caches to sync for RequestHeaderAuthRequestController
+I0807 19:07:11.671248       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0807 19:07:11.671328       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0807 19:07:11.671414       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+I0807 19:07:11.671458       1 shared_informer.go:311] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0807 19:07:11.673014       1 secure_serving.go:213] Serving securely on [::]:10349
+I0807 19:07:11.673258       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/run/antrea/antrea-controller-self-signed/antrea-controller.crt::/var/run/antrea/antrea-controller-self-signed/antrea-controller.key"
+I0807 19:07:11.673299       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0807 19:07:11.683877       1 tier.go:157] "Failed to create system Tier on init, will retry" tier="baseline" attempts=1 err="Internal error occurred: failed calling webhook \"tiervalidator.antrea.io\": failed to call webhook: Post \"https://antrea.kube-system.svc:443/validate/tier?timeout=5s\": dial tcp 10.96.177.110:443: connect: connection refused"
+I0807 19:07:11.771778       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+I0807 19:07:11.772126       1 shared_informer.go:318] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0807 19:07:11.772189       1 shared_informer.go:318] Caches are synced for RequestHeaderAuthRequestController
+I0807 19:07:12.691523       1 tier.go:157] "Failed to create system Tier on init, will retry" tier="baseline" attempts=2 err="Internal error occurred: failed calling webhook \"tiervalidator.antrea.io\": failed to call webhook: Post \"https://antrea.kube-system.svc:443/validate/tier?timeout=5s\": dial tcp 10.96.177.110:443: connect: connection refused"
+I0807 19:07:14.694665       1 tier.go:157] "Failed to create system Tier on init, will retry" tier="baseline" attempts=3 err="Internal error occurred: failed calling webhook \"tiervalidator.antrea.io\": failed to call webhook: Post \"https://antrea.kube-system.svc:443/validate/tier?timeout=5s\": dial tcp 10.96.177.110:443: connect: connection refused"
+I0807 19:07:18.697596       1 tier.go:157] "Failed to create system Tier on init, will retry" tier="baseline" attempts=4 err="Internal error occurred: failed calling webhook \"tiervalidator.antrea.io\": failed to call webhook: Post \"https://antrea.kube-system.svc:443/validate/tier?timeout=5s\": dial tcp 10.96.177.110:443: connect: connection refused"
+I0807 19:07:26.707909       1 tier.go:169] "Created system Tier" tier="baseline"
+I0807 19:07:26.712259       1 tier.go:169] "Created system Tier" tier="application"
+I0807 19:07:26.716696       1 tier.go:169] "Created system Tier" tier="platform"
+I0807 19:07:26.721165       1 tier.go:169] "Created system Tier" tier="networkops"
+I0807 19:07:26.727015       1 tier.go:169] "Created system Tier" tier="securityops"
+I0807 19:07:26.731462       1 tier.go:169] "Created system Tier" tier="emergency"
