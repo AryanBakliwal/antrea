@@ -1,0 +1,36 @@
+apiVersion: crd.antrea.io/v1alpha1
+kind: PacketCapture
+metadata:
+  creationTimestamp: "2025-02-08T20:19:05Z"
+  generation: 1
+  name: pc-from-toolbox
+  resourceVersion: "2738"
+  uid: 482dccff-f147-4d52-a3aa-cb308b9c27e0
+spec:
+  captureConfig:
+    firstN:
+      number: 10
+  destination:
+    ip: 8.8.8.8
+  packet:
+    ipFamily: IPv4
+    protocol: ICMP
+  source:
+    pod:
+      name: antrea-toolbox-deployment-cbcd5f4b5-zx4zd
+      namespace: lfx-mentorship
+  timeout: 300
+status:
+  conditions:
+  - lastTransitionTime: "2025-02-08T20:19:05Z"
+    message: ""
+    reason: Started
+    status: "True"
+    type: PacketCaptureStarted
+  - lastTransitionTime: "2025-02-08T20:19:23Z"
+    message: ""
+    reason: Succeed
+    status: "True"
+    type: PacketCaptureComplete
+  filePath: antrea-agent-htb9c:/tmp/antrea/packetcapture/packets/pc-from-toolbox.pcapng
+  numberCaptured: 10
